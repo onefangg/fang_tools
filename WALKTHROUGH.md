@@ -7,6 +7,8 @@
 
 0.0.2 -> library with dependencies
 
+0.0.3 -> add pyproject.toml for build alternative
+
 ## Setting up
 
 Creating virtual environments
