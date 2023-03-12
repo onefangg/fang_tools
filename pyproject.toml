@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "fang_tools"
+version = "0.0.3"
+requires-python = ">=3.7"
+
+dependencies = [
+    "rich>=13.0.0"
+]
