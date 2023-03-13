@@ -6,3 +6,5 @@ dist/
 .vscode/
 app/
 docs/build
+target/
+Cargo.lock

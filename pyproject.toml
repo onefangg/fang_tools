@@ -1,6 +1,10 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["maturin>=0.14,<0.15"]
+build-backend = "maturin"
+
+[tool.maturin]
+# "extension-module" tells pyo3 we want to build an extension module (skips linking against libpython.so)
+features = ["pyo3/extension-module"]
 
 
 [project]
@@ -16,6 +20,12 @@ dynamic = ["version"]
 
 [tool.hatch.version]
 path = 'fang_tools/__about__.py'
+
+
+[tool.hatch.envs.build]
+dependencies = [
+    "maturin",
+]
 
 
 [tool.hatch.envs.dev]
