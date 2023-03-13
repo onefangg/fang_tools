@@ -28,3 +28,9 @@ def pprint_starry_text(text: str, color: str ="bold magenta"):
     fmt_text = Text(text)
     fmt_text.stylize(color, 0, 6)
     console.print(fmt_text)
+
+
+def no_none(text: str = None):
+    if text is None:
+        raise Exception("not allowed")
+    return "OK"

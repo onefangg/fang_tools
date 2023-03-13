@@ -37,3 +37,14 @@ Activating them
 
 `hatch new --init`
 -> updates existing pyproject.toml (if any)
+
+
+create docs
+
+enter sub-environment specified
+
+`hatch -e docs shell`
+
+run command to quick start setup
+
+`sphinx-quickstart docs/ --ext-autodoc`
