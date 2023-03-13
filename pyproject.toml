@@ -1,13 +1,31 @@
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 
 [project]
 name = "fang_tools"
-version = "0.0.3"
 requires-python = ">=3.7"
 
 dependencies = [
     "rich>=13.0.0"
 ]
+description = ""
+dynamic = ["version"]
+
+[tool.pylint]
+
+[tool.hatch.version]
+path = 'fang_tools/__about__.py'
+
+
+[tool.hatch.envs.docs]
+dependencies = [
+    "sphinx"
+]
+
+
+[tool.hatch.envs.docs.scripts]
+start="sphinx-quickstart --ext-autodoc"
+reload="sphinx-autobuild docs/source/ docs/build/html"
+build="sphinx-build -b html docs/source/ docs/build/html"

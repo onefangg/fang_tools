@@ -9,6 +9,8 @@
 
 0.0.3 -> add pyproject.toml for build alternative
 
+0.0.4 -> using project manager (hatch) and adding docs
+
 ## Setting up
 
 Creating virtual environments
@@ -28,3 +30,10 @@ Activating them
 `pip install build`
 
 - recommendation from [pypa](https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives)
+
+
+
+`pipx install hatch`
+
+`hatch new --init`
+-> updates existing pyproject.toml (if any)
