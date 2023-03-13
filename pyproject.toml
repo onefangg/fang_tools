@@ -21,11 +21,12 @@ path = 'fang_tools/__about__.py'
 
 [tool.hatch.envs.docs]
 dependencies = [
-    "sphinx"
+    "sphinx",
+    "sphinx-autobuild",
 ]
 
 
 [tool.hatch.envs.docs.scripts]
-start="sphinx-quickstart --ext-autodoc"
+start="sphinx-quickstart docs/ --ext-autodoc"
 reload="sphinx-autobuild docs/source/ docs/build/html"
 build="sphinx-build -b html docs/source/ docs/build/html"
